@@ -1,28 +1,3 @@
-<style>
-  .snowflake {
-    position: absolute;
-    top: -30px;
-    user-select: none;
-    pointer-events: none;
-    animation: fall linear infinite;
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
-  }
-
-  @keyframes fall {
-    to {
-      transform: translateY(100vh) rotate(360deg);
-    }
-  }
-
-  .ground {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
-    z-index: 5;
-  }
-</style>
 
 `<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path
@@ -108,3 +83,4 @@ of snow (jumlah lebih sedikit karena ukuran kecil) for (let i = 0; i < 15; i++)
 { setTimeout(createSnowflake, i * 80); } }); // Pause snow when tab is not
 visible document.addEventListener('visibilitychange', () => { if
 (document.hidden) { clearInterval(snowInterval); } else { startSnowing(); } });
+
